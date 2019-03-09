@@ -1,11 +1,10 @@
 # wisielec
-wersja 2 gry memory
+wersja 2 gry wisielec
 
 2019-03-09
-- zmieniono wielkoś i wygląd planszy
-- temat - Memory Ravensburger
-- usunięto błąd zaliczania znalezienia przy kliknięciu w ten sam kafelek
+- dodano wiele haseł losowanych z listy
+- podmieniono dźwięki
 
 w przygotowaniu:
-- refaktoryzacja kodu
-- użycie jQuwry przy addEventListner
+- ładowanie haseł z pliku tekstowego
+- wpisywanie haseł z klawiatury
