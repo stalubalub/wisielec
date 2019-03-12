@@ -268,10 +268,10 @@ function wypisz_haslo() {
 }
 
 function rodzaj_rozgrywki() {
-	var decyzja =  '<div class=gracze><div class=jedenGracz onclick="hasloLosowanie()">Jeden gracz<br>(losowanie)</div><div class=dwaGracz onclick="hasloZReki()">Dwóch graczy<br>(z ręki)</div></div>';
-	
+	var decyzja = '<div class=gracze><div class=jedenGracz onclick="hasloLosowanie()">Jeden gracz<br>(losowanie)</div><div class=dwaGracz onclick="hasloZReki()">Dwóch graczy<br>(z ręki)</div></div>';
+
 	// var decyzja =  '<div class=gracze><div class=jedenGracz onclick="hasloLosowanie()">Jeden gracz<br>(losowanie)</div><div class=dwaGracz onclick="console.log(\'iiiiii\')">Dwóch graczy<br>(z ręki)</div></div>';
-	document.getElementById("plansza").innerHTML = decyzja; 	
+	document.getElementById("plansza").innerHTML = decyzja;
 }
 
 function hasloZReki() {
@@ -431,13 +431,13 @@ function sprawdz(nr) {
 }
 
 // function hasloZReki() {
-	
-	
-	// var pole = document.getElementById("pole");
-	// haslo1 = pole.value;
-	
-	
-	// var div = document.getElementById("content")
-	// div.innerHTML = "Zawartosc pola : <strong>"+pole.value+"</strong>"
-	// document.getElementById("plansza").innerHTML = haslo1;
+
+
+// var pole = document.getElementById("pole");
+// haslo1 = pole.value;
+
+
+// var div = document.getElementById("content")
+// div.innerHTML = "Zawartosc pola : <strong>"+pole.value+"</strong>"
+// document.getElementById("plansza").innerHTML = haslo1;
 // }
