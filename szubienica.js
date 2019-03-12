@@ -236,29 +236,36 @@ function losuj() {
 losuj();
 
 // var haslo = wybrane_haslo;
-var haslo = wylosowane_haslo;
-haslo = haslo.toUpperCase();
+// var haslo = wylosowane_haslo;
+// haslo = haslo.toUpperCase();
 
-var dlugosc = haslo.length;
-var ile_skuch = 0;
-var licznik_skuch = 8;
 
 var yes = new Audio("Pop.wav");
 var no = new Audio("Basso.wav");
 var win = new Audio("win.wav");
 var lose = new Audio("Lose.mp3");
 
+var dlugosc = 0;
+var ile_skuch = 0;
+var licznik_skuch = 8;
+
+var haslo = "";
 var haslo1 = "";
 var haslo_z_reki = "";
 
 
-for (i = 0; i < dlugosc; i++) {
-	if (haslo.charAt(i) == " ") haslo1 = haslo1 + " ";
-	// 	nie można użyć tablicy [] - zamiast tego charAt()
-	else if (haslo.charAt(i) == ",") haslo1 = haslo1 + ",";
-	else haslo1 = haslo1 + "-";
-}
+function koduj() {
+	// haslo = wylosowane_haslo;
+	dlugosc = haslo.length;
+	haslo = haslo.toUpperCase();
 
+	for (i = 0; i < dlugosc; i++) {
+		if (haslo.charAt(i) == " ") haslo1 = haslo1 + " ";
+		// 	nie można użyć tablicy [] - zamiast tego charAt()
+		else if (haslo.charAt(i) == ",") haslo1 = haslo1 + ",";
+		else haslo1 = haslo1 + "-";
+	}
+}
 
 // !przygotowanie hasła do wyświetlenia - tutaj oprofgramować ify
 
@@ -271,21 +278,18 @@ function rodzaj_rozgrywki() {
 	document.getElementById("plansza").innerHTML = decyzja;
 }
 
-function hasloZReki() {
-	console.log('iiiiii');
-	console.log('hasło z reki: ' + haslo_z_reki);
-	console.log('wybrane hasło: ' + wybrane_haslo);
-	// var haslo_z_reki = "Ala ma kota";
-	// var haslo = haslo_z_reki;
-	wypisz_haslo();
-}
-
 function hasloLosowanie() {
+	// losuj();
+	haslo = wylosowane_haslo;
+	koduj();
+	wypisz_haslo();
 	console.log('hasło: ' + haslo);
 	console.log('haslo1: ' + haslo1);
-	// losuj();
-	// haslo = wylosowane_haslo;
-	wypisz_haslo();
+}
+
+function hasloZReki() {
+	var zapytanie = '<p><input type="text" id="pole" default="wpisz hasło do zgadnięcia" /><input type="button" value="wyślij hasło" onclick="getText()" /></p>'
+	document.getElementById("plansza").innerHTML = zapytanie;
 }
 
 window.onload = start; // od tego się zaczyna !!!
@@ -425,6 +429,14 @@ function sprawdz(nr) {
 		document.getElementById("alfabet").innerHTML = "NIE DAŁEŚ RADY, prawidłowe hasło to: " + haslo + '<br/><br/><span class="reset" onclick="location.reload()">JESZCZE RAZ?</span>';
 		lose.play();
 	}
+}
+
+function getText(){
+	var pole = document.getElementById("pole");
+	haslo_z_reki = pole.value;
+	haslo = haslo_z_reki;
+	koduj();
+	wypisz_haslo();
 }
 
 // function hasloZReki() {
