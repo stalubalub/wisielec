@@ -88,3 +88,39 @@ body
 	padding: 2px;
 	min-height: 20px;
 }
+
+.gracze {
+	width: 604px;
+	/* height: 105px; */
+	text-align: center;
+	background-color: #292929;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.jedenGracz {
+	border: 1px #ffffff solid;
+	float: left;
+	width: 260px;
+	height: 100%;
+	padding: 20px;
+}
+
+.jedenGracz:hover {
+	background-color: #4668b3;
+}
+
+.dwaGracz {
+	border: 1px #ffffff solid;
+	float: left;
+	width: 260px;
+	/* height: 115px; */
+	height: 100%;
+	padding: 20px;
+}
+
+.dwaGracz:hover {
+	background-color: #d94348;
+}
