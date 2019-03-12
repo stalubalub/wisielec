@@ -263,14 +263,11 @@ for (i = 0; i < dlugosc; i++) {
 // !przygotowanie hasła do wyświetlenia - tutaj oprofgramować ify
 
 function wypisz_haslo() {
-	// document.getElementById("plansza").innerHTML = wybor_metody;
 	document.getElementById("plansza").innerHTML = haslo1;
 }
 
 function rodzaj_rozgrywki() {
 	var decyzja = '<div class=gracze><div class=jedenGracz onclick="hasloLosowanie()">Jeden gracz<br>(losowanie)</div><div class=dwaGracz onclick="hasloZReki()">Dwóch graczy<br>(z ręki)</div></div>';
-
-	// var decyzja =  '<div class=gracze><div class=jedenGracz onclick="hasloLosowanie()">Jeden gracz<br>(losowanie)</div><div class=dwaGracz onclick="console.log(\'iiiiii\')">Dwóch graczy<br>(z ręki)</div></div>';
 	document.getElementById("plansza").innerHTML = decyzja;
 }
 
@@ -284,10 +281,10 @@ function hasloZReki() {
 }
 
 function hasloLosowanie() {
-	console.log('hasło wylosowane: ' + haslo);
-	// console.log('wybrane hasło: ' + wybrane_haslo);
+	console.log('hasło: ' + haslo);
+	console.log('haslo1: ' + haslo1);
 	// losuj();
-	// var haslo = wylosowane_haslo;
+	// haslo = wylosowane_haslo;
 	wypisz_haslo();
 }
 
