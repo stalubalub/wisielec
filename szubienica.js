@@ -7,6 +7,9 @@
  * Copyright (c) 2019 Your Company
  */
 
+// do poprawienia:
+// formularz z uzupełnianym hasłem
+
 
 // dodatkowe warianty haseł
 var tablica_hasla = new Array(215);
